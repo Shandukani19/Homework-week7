@@ -1,5 +1,5 @@
 body {
-  background-color: silver;
+  background-color: whitesmoke;
 }
 
 .weather-app {
@@ -8,4 +8,44 @@ body {
   margin: 50px auto;
   padding: 30px;
   border-radius: 10px;
+}
+
+header {
+  border-bottom: 1px solid silver;
+  padding-bottom: 25px;
+}
+
+.search-input {
+  width: 75%;
+  padding: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  font-size: 16px;
+}
+
+.search-button {
+  border: none;
+  margin-left: 5px;
+  border-radius: 5px;
+  color: white;
+  background-color: green;
+  padding: 18px 30px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+main {
+  padding: 30px 0;
+}
+
+.city {
+  font-size: 38px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.current-weather {
+  display: flex;
+  justify-content: space-between;
 }
