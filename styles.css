@@ -1,6 +1,6 @@
 body {
   background-color: whitesmoke;
-    font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .weather-app {
@@ -84,7 +84,7 @@ strong {
 footer {
   text-align: center;
   border-top: 1px solid silver;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 a {
