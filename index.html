@@ -16,12 +16,13 @@
   <body>
     <div class="weather-app">
       <header>
-        <form>
+        <form id="search-form">
           <input
             type="search"
             placeholder="Enter city"
             required
             class="search-input"
+            id="search-input"
           />
           <input type="submit" value="search" class="search-button" />
         </form>
@@ -29,7 +30,7 @@
       <main>
         <div class="current-weather">
           <div class="weather-info">
-            <h1 class="city">Helsinki</h1>
+            <h1 class="city" id="city">Helsinki</h1>
             <p>
               <span class="current-day"> Wednesday </span> |
               <span class="current-hour"> 19 </span>:
