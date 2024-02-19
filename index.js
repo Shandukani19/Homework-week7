@@ -18,6 +18,9 @@ function updateWeather(response) {
 
   let timeElement = document.querySelector("#current-time");
   timeElement.innerHTML = formatDate(now);
+
+  let icon = document.querySelector("#icon");
+  icon.innerHTML = `img src="${response.data.condition.icon_url}" class="temperature-icon"/>`;
 }
 
 function formatDate(now) {
@@ -34,7 +37,7 @@ function formatDate(now) {
   ];
 
   let day = days[now.getDay()];
-  if (minutes < 10){
+  if (minutes < 10) {
     minutes = `0${minutes}`;
   }
 
