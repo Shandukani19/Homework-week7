@@ -13,6 +13,32 @@ function updateWeather(response) {
 
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
+
+  let now = new Date(response.data.time * 1000);
+
+  let timeElement = document.querySelector("#current-time");
+  timeElement.innerHTML = formatDate(now);
+}
+
+function formatDate(now) {
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = days[now.getDay()];
+  if (minutes < 10){
+    minutes = `0${minutes}`;
+  }
+
+  return `${day} | ${hours}:${minutes}`;
 }
 
 function searchCity(city) {
