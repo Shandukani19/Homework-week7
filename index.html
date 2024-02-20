@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="src/styles.css" />
     <title>Document</title>
   </head>
   <body>
@@ -39,8 +39,11 @@
             </p>
           </div>
           <div class="temperature-info">
-            <span id="icon">
-              
+            <span id="temperature-icon">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+                class="temperature-icon"
+              />
             </span>
             <span class="temperature-value" id="temperature"> </span>
             <span class="temperature-unit"> ℃ </span>
@@ -60,6 +63,6 @@
         </p>
       </footer>
     </div>
-    <script src="index.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>
