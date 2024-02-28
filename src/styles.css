@@ -92,3 +92,24 @@ footer {
 a {
   color: green;
 }
+
+.weather-forecast {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.forecast-day {
+  font-size: 15px;
+}
+
+.forecast-temperatures {
+  font-size: 13px;
+}
+
+.temperature-max {
+  font-weight: 900;
+}
+
+.temperature-min {
+  opacity: 0.8;
+}
