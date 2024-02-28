@@ -57,7 +57,36 @@ function search(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+      <div class="forecast-container"
+       <div class="forecast-day">${day}</div>
+          <div class="forecast-icon">
+            <img
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+              alt=""
+              width="60"
+            />
+          </div>
+          <div class="forecast-temperatures">
+            <span class="temperature-max">10°</span>
+            <span class="temperature-min">3°</span>
+          </div>
+          </div>
+          `;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
 searchCity("Helsinki");
+displayForecast();
