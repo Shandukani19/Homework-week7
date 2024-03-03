@@ -1,6 +1,7 @@
 body {
   background-color: whitesmoke;
   font-family: "Roboto", sans-serif;
+  
 }
 
 .weather-app {
@@ -101,20 +102,23 @@ a {
 
 .forecast-day {
   font-size: 15px;
+  text-align: center;
+  line-height: 20px;
+  margin-bottom: 10px;
 }
 
 .forecast-temperatures {
   font-size: 13px;
   padding: 0 10px;
-
+  text-align: center;
+  color: green;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
 }
 
-.temperature-max {
-  font-weight: 900;
-}
-
-.temperature-min {
-  opacity: 0.8;
+.forecast-temperature {
+  padding: 0 10px;
 }
 
 .forecast-icon {
