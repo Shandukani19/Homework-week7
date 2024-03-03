@@ -105,6 +105,8 @@ a {
 
 .forecast-temperatures {
   font-size: 13px;
+  padding: 0 10px;
+
 }
 
 .temperature-max {
@@ -113,4 +115,11 @@ a {
 
 .temperature-min {
   opacity: 0.8;
+}
+
+.forecast-icon {
+  height: 80%;
+  width: 80px;
+  display: block;
+  margin: 0 auto;
 }

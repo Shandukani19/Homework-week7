@@ -59,6 +59,13 @@ function search(event) {
   searchCity(searchInput.value);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
 function getForecast(city) {
   let apiKey = "t2a074aee318112cc56a6b83544bob8f";
   let apiUrl =
@@ -67,28 +74,33 @@ function getForecast(city) {
 }
 
 function displayForecast(response) {
-  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+ 
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
       <div class="forecast-container"
-       <div class="forecast-day">${day}</div>
-       <div class="forecast-icon">
+       <div class="forecast-day">${formatDay(day.time)}
+       </div>
+       <div>
             <img
-              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
-              alt=""
-              width="60"
+              src="${day.condition.icon_url}"
+              class="forecast-icon"
             />
        </div>
        <div class="forecast-temperatures">
-            <span class="temperature-max">10°</span>
-            <span class="temperature-min">3°</span>
+            <span class="temperature-max">${Math.round(
+              day.temperature.maximum
+            )}°</span>
+            <span class="temperature-min">${Math.round(day.temperature.maximum)}
+            °</span>
        </div>
           </div>
           `;
+    }
   });
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
@@ -99,4 +111,4 @@ form.addEventListener("submit", search);
 
 searchCity("Helsinki");
 
-displayForecast();
+
