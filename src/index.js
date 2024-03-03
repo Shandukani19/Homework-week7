@@ -21,6 +21,8 @@ function updateWeather(response) {
 
   let iconElement = document.querySelector("#temperature-icon");
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="temperature-icon" />`;
+
+getForecast(response.data.city);
 }
 
 function formatDate(now) {
@@ -57,7 +59,14 @@ function search(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "t2a074aee318112cc56a6b83544bob8f";
+  let apiUrl =
+    `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
   let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
   let forecastHtml = "";
 
@@ -67,17 +76,17 @@ function displayForecast() {
       `
       <div class="forecast-container"
        <div class="forecast-day">${day}</div>
-          <div class="forecast-icon">
+       <div class="forecast-icon">
             <img
               src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
               alt=""
               width="60"
             />
-          </div>
-          <div class="forecast-temperatures">
+       </div>
+       <div class="forecast-temperatures">
             <span class="temperature-max">10°</span>
             <span class="temperature-min">3°</span>
-          </div>
+       </div>
           </div>
           `;
   });
@@ -89,4 +98,5 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
 searchCity("Helsinki");
+
 displayForecast();

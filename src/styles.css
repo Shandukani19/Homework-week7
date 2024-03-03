@@ -97,7 +97,6 @@ a {
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
-  text-align: center;
 }
 
 .forecast-day {
