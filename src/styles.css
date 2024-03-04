@@ -1,5 +1,5 @@
 body {
-  background-color: whitesmoke;
+ background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
   font-family: "Roboto", sans-serif;
   
 }
@@ -64,7 +64,7 @@ strong {
 }
 
 .temperature-value {
-  font-size: 80px;
+  font-size: 88px;
   font-weight: 900;
   position: relative;
   right: -8px;
@@ -73,8 +73,8 @@ strong {
 .temperature-icon {
   position: relative;
   top: 15px;
-  width: 80px;
-  height: 80px;
+  width: 88px;
+  height: 88px;
   right: -13px;
 }
 
@@ -88,6 +88,7 @@ footer {
   text-align: center;
   border-top: 1px solid silver;
   padding-top: 10px;
+   margin-top: 10px;
 }
 
 a {
@@ -103,18 +104,19 @@ a {
 .forecast-day {
   font-size: 15px;
   text-align: center;
-  line-height: 20px;
+  line-height: 10px;
   margin-bottom: 10px;
 }
 
 .forecast-temperatures {
-  font-size: 13px;
+  font-size: 14px;
   padding: 0 10px;
   text-align: center;
   color: green;
-  margin-top: 10px;
+  margin-top: 5px;
   display: flex;
   justify-content: center;
+  
 }
 
 .forecast-temperature {
@@ -122,7 +124,7 @@ a {
 }
 
 .forecast-icon {
-  height: 80%;
+  height: 75%;
   width: 80px;
   display: block;
   margin: 0 auto;

@@ -80,7 +80,7 @@ function displayForecast(response) {
       forecastHtml =
         forecastHtml +
         `
-      <div class="forecast-container"
+      <div class="forecast-container">
        <div class="forecast-day">${formatDay(day.time)}
        </div>
        
